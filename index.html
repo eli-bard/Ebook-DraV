@@ -1,419 +1,198 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Orientações para Pais de Crianças com Transtorno do Espectro Autista (TEA) - Baseado em UpToDate</title>
+    <title>Guia Pós-Consulta: Entendendo o TEA</title>
     <style>
         :root {
-            --primary-color: #007BFF;
-            --secondary-color: #6C757D;
-            --background-color: #F8F9FA;
-            --text-color: #212529;
-            --highlight-color: #E9ECEF;
-            --warning-color: #FFC107;
-            --danger-color: #DC3545;
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --accent: #eef7fd;
+            --text: #333;
+            --light-text: #666;
+            --border: #dcdde1;
         }
+
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
-            color: var(--text-color);
-            background-color: var(--background-color);
+            color: var(--text);
+            background-color: #f4f7f6;
             margin: 0;
             padding: 0;
         }
+
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            background: #fff;
+            padding: 40px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
         header {
-            background: linear-gradient(135deg, var(--primary-color), #0056b3);
-            color: white;
             text-align: center;
-            padding: 2rem 1rem;
+            border-bottom: 2px solid var(--secondary);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
         }
-        .aviso {
-            background-color: var(--warning-color);
-            color: #212529;
-            border: 2px solid #FFA000;
-            padding: 1.5rem;
-            margin: 1rem;
-            border-radius: 8px;
-            font-weight: bold;
+
+        h1 { color: var(--primary); margin-bottom: 5px; }
+        h2 { color: var(--secondary); border-left: 5px solid var(--secondary); padding-left: 15px; margin-top: 30px; }
+        h3 { color: var(--primary); margin-top: 20px; }
+
+        .highlight-box {
+            background-color: var(--accent);
+            border-radius: 6px;
+            padding: 20px;
+            margin: 20px 0;
+            border-left: 5px solid var(--secondary);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .card {
+            border: 1px solid var(--border);
+            padding: 15px;
+            border-radius: 6px;
+        }
+
+        ul { padding-left: 20px; }
+        li { margin-bottom: 10px; }
+
+        .footer {
+            margin-top: 40px;
+            font-size: 0.9em;
+            color: var(--light-text);
             text-align: center;
+            border-top: 1px solid var(--border);
+            padding-top: 20px;
         }
-        nav {
-            background-color: white;
-            padding: 1rem;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-        nav li {
-            margin: 0 1rem;
-        }
-        nav a {
-            color: var(--primary-color);
-            text-decoration: none;
+
+        .important-note {
+            background: #fff3cd;
+            color: #856404;
+            padding: 15px;
+            border-radius: 6px;
             font-weight: bold;
-            padding: 0.5rem 1rem;
-            border-radius: 4px;
-            transition: background 0.3s;
+            margin: 20px 0;
         }
-        nav a:hover {
-            background-color: var(--highlight-color);
-        }
-        main {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem 1rem;
-        }
-        section {
-            margin-bottom: 3rem;
-            background: white;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
-        h1, h2, h3 {
-            color: var(--primary-color);
-        }
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-        h2 {
-            font-size: 2rem;
-            border-bottom: 2px solid var(--secondary-color);
-            padding-bottom: 0.5rem;
-        }
-        h3 {
-            font-size: 1.5rem;
-        }
-        .destaque {
-            background-color: var(--highlight-color);
-            padding: 1rem;
-            border-left: 5px solid var(--primary-color);
-            margin: 1rem 0;
-            border-radius: 4px;
-        }
-        ul, ol {
-            padding-left: 2rem;
-        }
-        li {
-            margin-bottom: 0.5rem;
-        }
-        @media (max-width: 768px) {
-            nav ul {
-                flex-direction: column;
-            }
-            nav li {
-                margin: 0.5rem 0;
-            }
-            section {
-                padding: 1rem;
-            }
-            h1 {
-                font-size: 2rem;
-            }
+
+        @media (max-width: 600px) {
+            .grid { grid-template-columns: 1fr; }
+            .container { padding: 20px; margin: 10px; }
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Orientações para Pais de Crianças com Transtorno do Espectro Autista (TEA)</h1>
-        <p style="font-size: 1.2rem;">Baseado em evidências médicas do UpToDate</p>
-    </header>
 
-    <div class="aviso">
-        <strong>AVISO IMPORTANTE:</strong> Esta página é um guia geral. <strong>Sempre anote suas dúvidas e discuta com o médico após a consulta.</strong> Não substitui orientação profissional personalizada.
-    </div>
+<div class="container">
 
-    <nav>
-        <ul>
-            <li><a href="#o-que-e-autismo">O que é Autismo</a></li>
-            <li><a href="#sinais-e-sintomas">Sinais e Sintomas</a></li>
-            <li><a href="#sinais-precoces">Sinais Precoces</a></li>
-            <li><a href="#mudancas-sensoriais">Mudanças Sensoriais</a></li>
-            <li><a href="#habilidades-cognitivas">Habilidades Cognitivas Especiais</a></li>
-            <li><a href="#desenvolvimento-linguagem">Desenvolvimento da Linguagem</a></li>
-            <li><a href="#masking-shutdown-meltdown">Masking, Shutdown e Meltdown</a></li>
-            <li><a href="#diagnostico">Como o Médico Diagnostica</a></li>
-            <li><a href="#transtornos-associados">Transtornos Associados</a></li>
-            <li><a href="#tratamento-terapias">Tratamento e Terapias</a></li>
-            <li><a href="#intervencao-precoces">Intervenção Precoce (0-3 anos)</a></li>
-            <li><a href="#educacao">Educação (3+ anos)</a></li>
-            <li><a href="#dicas-praticas">Dicas Práticas para o Dia a Dia</a></li>
-            <li><a href="#apoio-filho">Como Você Pode Apoiar Seu Filho</a></li>
-            <li><a href="#mitos-verdades">Mitos e Verdades</a></li>
-            <li><a href="#recursos">Para Pais e Responsáveis</a></li>
-        </ul>
-    </nav>
+    <section>
+        <h2>O que é o TEA?</h2>
+        <p>O Transtorno do Espectro Autista é uma deficiência de desenvolvimento que afeta como uma pessoa interage com o mundo e se comunica com os outros. O termo "espectro" é fundamental: ele reflete a ampla gama de sintomas, comportamentos e níveis de suporte que cada indivíduo pode apresentar.</p>
+        
+        <div class="highlight-box">
+            <strong>Neurodiversidade:</strong> Muitas vezes usamos este termo para descrever as diferentes formas como o cérebro humano pode funcionar, incluindo o autismo, TDAH e dificuldades de aprendizagem.
+        </div>
+    </section>
 
-    <main>
-        <section id="o-que-e-autismo">
-            <h2>1. O que é Autismo</h2>
-            <p>O Transtorno do Espectro Autista (TEA) é um transtorno do neurodesenvolvimento que afeta a comunicação social, o comportamento e o processamento sensorial. É chamado de "espectro" porque os sintomas variam amplamente em intensidade e apresentação entre indivíduos.</p>
-            <div class="destaque">
+    <section>
+        <h2>Áreas Principais de Desafio</h2>
+        <p>Embora cada criança seja única, os sintomas geralmente se agrupam em duas áreas principais:</p>
+        
+        <div class="grid">
+            <div class="card">
+                <h3>1. Comunicação Social</h3>
                 <ul>
-                    <li><strong>Prevalência:</strong> Aproximadamente 2 a 25 em 1.000 crianças. Razão 4:1 (meninos:meninas).</li>
-                    <li><strong>Familiares:</strong> 4-14% dos irmãos também apresentam TEA.</li>
+                    <li>Dificuldade em manter contato visual.</li>
+                    <li>Desafios em ler expressões faciais ou entender ironia e sarcasmo.</li>
+                    <li>Atraso ou ausência na fala</li>
+                    <li>Dificuldade em compartilhar interesses ("atenção compartilhada")</li>
                 </ul>
             </div>
-            <p>Anote dúvidas sobre o espectro específico do seu filho para discutir com o médico.</p>
-        </section>
-
-        <section id="sinais-e-sintomas">
-            <h2>2. Sinais e Sintomas (Detalhado - CDC/UpToDate)</h2>
-            <h3>Diferenças Sociais e de Comunicação</h3>
-            <ul>
-                <li>Evita contato ocular.</li>
-                <li>Não responde ao nome aos 9 meses.</li>
-                <li>Sem expressões faciais compartilhadas aos 9 meses.</li>
-                <li>Sem gestos (como acenar) aos 12 meses.</li>
-                <li>Não aponta para mostrar interesse aos 18 meses.</li>
-                <li>Não nota machucados ou emoções dos outros aos 24 meses.</li>
-                <li>Não brinca com outras crianças aos 3 anos.</li>
-                <li>Não faz brincadeiras de faz-de-conta aos 4 anos.</li>
-                <li>Não canta ou dança com outros aos 5 anos.</li>
-                <li>Não entende piadas ou sarcasmo.</li>
-            </ul>
-            <h3>Comportamentos Repetitivos e Restritos</h3>
-            <ul>
-                <li>Alinha brinquedos e fica chateado se a ordem mudar.</li>
-                <li>Repete palavras ou frases (ecolalia).</li>
-                <li>Brinca sempre da mesma forma.</li>
-                <li>Foca em partes de objetos (ex: rodas de carrinhos).</li>
-                <li>Fica chateado com mudanças na rotina.</li>
-                <li>Interesses obsessivos (ex: trens, números).</li>
-                <li>Segue rotinas específicas.</li>
-                <li>Bate mãos, balança o corpo ou gira.</li>
-                <li>Reações diferentes a sons, cheiros ou texturas.</li>
-            </ul>
-            <h3>Outros Sinais</h3>
-            <ul>
-                <li>Atraso na linguagem.</li>
-                <li>Desorganização ou hiperatividade.</li>
-                <li>Possíveis crises de choro intenso.</li>
-                <li>Hábitos estranhos de sono ou alimentação.</li>
-                <li>Problemas gastrointestinais.</li>
-                <li>Variações de humor, ansiedade.</li>
-            </ul>
-        </section>
-
-        <section id="sinais-precoces">
-            <h2>3. Sinais Precoces (com Idades Específicas)</h2>
-            <p>Monitore marcos do desenvolvimento:</p>
-            <ul>
-                <li><strong>9 meses:</strong> Não responde ao nome, sem expressões compartilhadas.</li>
-                <li><strong>12 meses:</strong> Sem gestos (acenar, dar tchau).</li>
-                <li><strong>15 meses:</strong> Poucas palavras.</li>
-                <li><strong>18 meses:</strong> Não aponta para pedir ou mostrar.</li>
-                <li><strong>24 meses:</strong> Não nota emoções dos outros, frases de 2 palavras.</li>
-                <li><strong>3 anos:</strong> Não brinca com pares.</li>
-                <li><strong>4 anos:</strong> Sem faz-de-conta.</li>
-                <li><strong>5 anos:</strong> Não canta/dança em grupo, não entende piadas.</li>
-            </ul>
-            <div class="destaque">
-                <p>Procure avaliação precoce se notar esses sinais. Anote observações para o pediatra.</p>
+            <div class="card">
+                <h3>2. Comportamentos Repetitivos</h3>
+                <ul>
+                    <li>Movimentos corporais como balançar ou girar ("stimming").</li>
+                    <li>Insistência em rotinas e rituais específicos.</li>
+                    <li>Interesses intensos e focados em temas específicos.</li>
+                    <li>Sensibilidade incomum a sons, texturas ou cheiros.</li>
+                </ul>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="mudancas-sensoriais">
-            <h2>4. Mudanças Sensoriais (Detalhado)</h2>
-            <h3>Hipersensibilidade</h3>
-            <ul>
-                <li>Sons altos, luzes fortes, texturas de roupas, cheiros fortes.</li>
-            </ul>
-            <h3>Hipossensibilidade/Indiferença</h3>
-            <ul>
-                <li>Não nota dor, fome ou frio.</li>
-            </ul>
-            <h3>Reações Alimentares</h3>
-            <ul>
-                <li>Aversões a texturas (ex: pedaços moles).</li>
-            </ul>
-            <h3>Sensibilidade ao Toque</h3>
-            <ul>
-                <li>Resistência a abraços ou cortes de cabelo.</li>
-            </ul>
-            <h3>Dicas Práticas</h3>
-            <ul>
-                <li>Use fones antirruído para sons.</li>
-                <li>Ofereça roupas macias e sem etiquetas.</li>
-                <li>Introduza texturas alimentares gradualmente.</li>
-                <li>Avise antes de tocar: "Vou te abraçar agora".</li>
-                <li>Crie um "kit sensorial" com itens calmantes.</li>
-            </ul>
-        </section>
+    <section>
+        <h2>Mitos e Verdades Frequentes</h2>
+        <h3>As vacinas causaram isso?</h3>
+        <p><strong>Não.</strong> Estudos rigorosos e extensos comprovam que não existe ligação entre receber vacinas e o autismo.</p>
+        
+        <h3>O autismo tem cura?</h3>
+        <p>O autismo não é uma doença, portanto, não existe "cura". No entanto, terapias e intervenções precoces são fundamentais para ajudar a criança a atingir seu potencial máximo, ganhar independência e melhorar a socialização.</p>
+    </section>
 
-        <section id="habilidades-cognitivas">
-            <h2>5. Habilidades Cognitivas Especiais</h2>
-            <p>Muitas crianças com TEA têm forças em:</p>
-            <ul>
-                <li>Tarefas rotineiras e memorização.</li>
-                <li>Dificuldade em tarefas novas ou abstratas (ex: matemática conceitual).</li>
-                <li>Habilidades savant: memória de calendários, hiperlexia (leitura precoce).</li>
-            </ul>
-            <div class="destaque">
-                <p>Valorize as forças para construir confiança.</p>
-            </div>
-        </section>
+    <section>
+        <h2>Próximos Passos e Tratamento</h2>
+        <p>O plano de tratamento ideal é personalizado, considerando a idade e as necessidades específicas do seu filho.</p>
+        <ul>
+            <li><strong>Intervenção Precoce:</strong> Essencial para minimizar atrasos e maximizar marcos de desenvolvimento. Por esse motivo precisamos de tantos outros especialistas: Fisioterapeuta, Terapeuta ocupacional, Fonoaudiólogo...</li>
+            <li><strong>Suporte Escolar:</strong> Programas educacionais individualizados ajudam na adaptação e aprendizado.</li>
+            <li><strong>Monitoramento:</strong> O acompanhamento contínuo garante que o diagnóstico e as terapias sejam ajustados conforme a criança cresce.</li>
+        </ul>
+        
+        <div class="important-note">
+            Lembre-se: Aceitar seu filho como ele é e aprender como o cérebro dele funciona é uma das maiores formas de apoio que você pode oferecer.
+        </div>
+    </section>
 
-        <section id="desenvolvimento-linguagem">
-            <h2>6. Desenvolvimento da Linguagem</h2>
-            <ul>
-                <li>Atraso na fala é o primeiro sinal comum.</li>
-                <li>Variabilidade: alguns nunca falam (não verbal).</li>
-                <li>Ecolalia: repetição de frases ouvidas.</li>
-                <li>Dificuldade em conversas recíprocas.</li>
-                <li>Linguagem usada para necessidades, não social.</li>
-            </ul>
-            <p>Terapias como fonoaudiologia ajudam muito.</p>
-        </section>
+<section>
+        <h2>Estratégias de Apoio e Regulação</h2>
+        
+        <h3>Conforto Sensorial e Ambiente</h3>
+        <p>Muitas pessoas com TEA têm respostas sensoriais atípicas a sons, gostos ou toques. Pequenos ajustes podem reduzir significativamente o desconforto:</p>
+        <ul>
+            <li><strong>Proteção Auditiva:</strong> Use fones antirruído para lidar com sons que podem ser dolorosos ou assustadores.</li>
+            <li><strong>Vestuário e Toque:</strong> Ofereça roupas macias e sem etiquetas. Lembre-se que um toque leve pode ser sentido como doloroso, enquanto uma pressão profunda pode ser calmante. Sempre avise antes de tocar: "Vou te abraçar agora".</li>
+            <li><strong>Alimentação:</strong> Introduza novas texturas e sabores gradualmente, respeitando as obsessões alimentares que podem ter causas sensoriais.</li>
+            <li><strong>Kit Sensorial:</strong> Crie um conjunto com itens que a criança considere calmantes para momentos de sobrecarga.</li>
+        </ul>
 
-        <section id="masking-shutdown-meltdown">
-            <h2>7. Masking, Shutdown e Meltdown</h2>
-            <h3>Masking</h3>
-            <p>Esconder sintomas para "parecer normal", comum em meninas. Cansa e leva a exaustão.</p>
-            <h3>Shutdown</h3>
-            <p>Fechamento: criança para de responder, se isola por sobrecarga sensorial.</p>
-            <h3>Meltdown</h3>
-            <p>Crise explosiva: choro, gritos por sobrecarga.</p>
-            <h3>Como Reconhecer e Lidar</h3>
-            <ul>
-                <li>Observe sinais precoces (agitação).</li>
-                <li>Crie espaço calmo.</li>
-                <li>Use comunicação visual.</li>
-                <li>Evite punição; foque em regulação.</li>
-            </ul>
-        </section>
+        <h3>Comunicação e Previsibilidade</h3>
+        <p>A insistência na mesmice e a dificuldade com mudanças de rotina são marcas do autismo. Aumentar a previsibilidade ajuda a reduzir a ansiedade:</p>
+        <ul>
+            <li><strong>Rotinas Visuais:</strong> Utilize quadros com imagens e calendários pictóricos para organizar o dia.</li>
+            <li><strong>Comunicação Simplificada:</strong> Use frases curtas ou sistemas como o PECS. Ao oferecer escolhas, limite a duas opções para não sobrecarregar a tomada de decisão.</li>
+            <li><strong>Transições:</strong> Avise com antecedência sobre mudanças e dê tempo para a criança processar a transição entre atividades.</li>
+        </ul>
 
-        <section id="diagnostico">
-            <h2>8. Como o Médico Diagnostica</h2>
-            <ul>
-                <li><strong>Equipe multidisciplinar:</strong> Pediatra, neurologista, psicólogo, fonoaudiólogo.</li>
-                <li><strong>Testes:</strong> ADOS, ADI-R, escalas de desenvolvimento.</li>
-                <li><strong>Critérios DSM-5:</strong> Déficits sociais/comunicação + comportamentos restritos + impacto precoce.</li>
-                <li><strong>Importância precoce:</strong> Melhora outcomes.</li>
-                <li>Avaliação de audição e visão obrigatória.</li>
-            </ul>
-        </section>
+        <h3>Lidando com Meltdowns e Shutdowns</h3>
+        <p>Mudanças na rotina ou excesso de estímulos podem levar a crises (meltdowns ou birras intensas). O foco deve ser sempre a segurança e a regulação:</p>
+        <ul>
+            <li><strong>Reconhecimento Precoce:</strong> Observe sinais de agitação antes que a crise escale.</li>
+            <li><strong>Espaço Seguro:</strong> Durante uma crise, crie um ambiente calmo, escuro e sem excesso de estímulos ou ruídos.</li>
+            <li><strong>Regulação, não Punição:</strong> Foque em ajudar a criança a se acalmar. Use pausas para recuperação e técnicas de mindfulness para regulação emocional.</li>
+            <li><strong>Sono:</strong> Mantenha uma rotina de sono consistente e um quarto escuro para auxiliar no descanso reparador.</li>
+        </ul>
+    </section>
 
-        <section id="transtornos-associados">
-            <h2>9. Transtornos Associados</h2>
-            <ul>
-                <li>48% com deficiências de desenvolvimento (linguagem, intelectual, aprendizagem).</li>
-                <li>30% com crises convulsivas.</li>
-                <li>25% com síndromes (Frágil X, Rett, fenilcetonúria).</li>
-                <li>Comórbidos: TDAH, ansiedade, depressão.</li>
-            </ul>
-            <div class="destaque">
-                <p>Monitore e trate comorbidades.</p>
-            </div>
-        </section>
+    <section>
+        <h2>Recursos Úteis</h2>
+        <p>Para informações adicionais e suporte, você pode consultar:</p>
+        <ul>
+            <li><strong>Autism Speaks:</strong> www.autismspeaks.org </li>
+            <li><strong>CDC - "Learn the Signs. Act Early":</strong> www.cdc.gov/actearly </li>
+            <li><strong>Autism Navigator:</strong> Recursos em vídeo sobre sinais precoces.</li>
+        </ul>
+    </section>
+</div>
 
-        <section id="tratamento-terapias">
-            <h2>10. Tratamento e Terapias</h2>
-            <p>Não há cura, mas intervenções precoces melhoram habilidades.</p>
-            <ul>
-                <li><strong>Diagnóstico precoce:</strong> Chave para intervenção.</li>
-                <li><strong>PEI (Programa Educacional Individualizado):</strong> Plano personalizado.</li>
-                <li>Terapias: ABA, fono, TO, integração sensorial.</li>
-                <li>Medicamentos só após terapias estabilizadas (ex: para ansiedade).</li>
-                <li>AAP recomenda estrutura, direção, organização.</li>
-            </ul>
-        </section>
-
-        <section id="intervencao-precoces">
-            <h2>11. Intervenção Precoce (0-3 anos)</h2>
-            <p>Serviços gratuitos para bebês/toddler com atrasos. Inclui terapias em casa/escola.</p>
-            <ul>
-                <li>Referencie para teste auditivo/visual.</li>
-            </ul>
-        </section>
-
-        <section id="educacao">
-            <h2>12. Educação (3+ anos)</h2>
-            <ul>
-                <li>Educação especial.</li>
-                <li>PEI com metas claras.</li>
-                <li>Apoio escolar (professores auxiliares).</li>
-                <li>Comunique-se regularmente com a escola.</li>
-            </ul>
-        </section>
-
-        <section id="dicas-praticas">
-            <h2>13. Dicas Práticas para o Dia a Dia</h2>
-            <ul>
-                <li><strong>Rotinas visuais:</strong> Quadros com imagens.</li>
-                <li>Calendários pictóricos.</li>
-                <li>Comunicação simplificada (PECS).</li>
-                <li>Dê escolhas limitadas (2 opções).</li>
-                <li>Brincadeiras estruturadas para socialização.</li>
-                <li>Imprevistos: Avise antes, dê tempo de transição.</li>
-                <li>Ambientes sensoriais calmos.</li>
-                <li>Pausas para recuperação.</li>
-                <li>Mindfulness para regulação emocional.</li>
-                <li>Meltdowns: Espaço seguro, sem estímulos.</li>
-                <li>Alimentação: Experimente novas texturas devagar.</li>
-                <li>Sono: Rotina consistente, quarto escuro.</li>
-            </ul>
-        </section>
-
-        <section id="apoio-filho">
-            <h2>14. Como Você Pode Apoiar Seu Filho</h2>
-            <ul>
-                <li>Aceite a criança como é.</li>
-                <li>Aprenda sobre TEA continuamente.</li>
-                <li>Seja defensor na escola/saúde.</li>
-                <li>Ensine autodefesa quando apto.</li>
-                <li>Cuide da saúde mental da família.</li>
-                <li>Participe de grupos de apoio.</li>
-            </ul>
-        </section>
-
-        <section id="mitos-verdades">
-            <h2>15. Mitos e Verdades</h2>
-            <table style="width:100%; border-collapse: collapse;">
-                <tr><th style="border:1px solid #ddd; padding:1rem; background:var(--secondary-color); color:white;">Mito</th><th style="border:1px solid #ddd; padding:1rem; background:var(--secondary-color); color:white;">Verdade</th></tr>
-                <tr><td style="border:1px solid #ddd; padding:1rem;">Má criação causa TEA</td><td style="border:1px solid #ddd; padding:1rem;">FALSO - É neurobiológico.</td></tr>
-                <tr><td style="border:1px solid #ddd; padding:1rem;">Não sentem emoções</td><td style="border:1px solid #ddd; padding:1rem;">FALSO - Sentem intensamente, mas expressam diferente.</td></tr>
-                <tr><td style="border:1px solid #ddd; padding:1rem;">Vacinas causam TEA</td><td style="border:1px solid #ddd; padding:1rem;">FALSO - Estudo retratado prova o contrário.</td></tr>
-                <tr><td style="border:1px solid #ddd; padding:1rem;">Só é TEA se não fala</td><td style="border:1px solid #ddd; padding:1rem;">FALSO - Diagnóstico amplo.</td></tr>
-                <tr><td style="border:1px solid #ddd; padding:1rem;">Há cura</td><td style="border:1px solid #ddd; padding:1rem;">NÃO - Mas terapias ajudam.</td></tr>
-                <tr><td style="border:1px solid #ddd; padding:1rem;">Piora com idade</td><td style="border:1px solid #ddd; padding:1rem;">NÃO necessariamente - Pode melhorar com suporte.</td></tr>
-            </table>
-        </section>
-
-        <section id="recursos">
-            <h2>16. Para Pais e Responsáveis</h2>
-            <h3>Livros Recomendados</h3>
-            <ul>
-                <li>"O menino que caiu do céu" - Kate Swenson</li>
-                <li>"NeuroTribes" - Steve Silberman</li>
-            </ul>
-            <h3>Aplicativos Úteis</h3>
-            <ul>
-                <li>Proloquo2Go (comunicação AAC)</li>
-                <li>Special Words (aprendizado linguagem)</li>
-                <li>Autism Tracker (rastrear comportamentos)</li>
-            </ul>
-            <h3>Organizações e Recursos</h3>
-            <ul>
-                <li>Associação Brasileira de Autismo (ABRAÇA)</li>
-                <li>UpToDate (para profissionais)</li>
-                <li>CDC: cdc.gov/autism</li>
-            </ul>
-            <div class="destaque">
-                <p><strong>Lembre-se:</strong> Anote todas as dúvidas para a próxima consulta médica.</p>
-            </div>
-        </section>
-    </main>
 </body>
 </html>
