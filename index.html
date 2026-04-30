@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Orientações para Pais de Crianças Autistas</title>
+    <title>Orientação para Pais de Crianças Autistas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -11,230 +14,269 @@
             box-sizing: border-box;
         }
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Roboto', sans-serif;
             line-height: 1.6;
             color: #333;
             background-color: #f8f9fa;
+            padding: 20px;
+        }
+        .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 20px;
         }
         header {
             text-align: center;
-            padding: 40px 20px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
             margin-bottom: 40px;
-            border-radius: 10px;
+            padding: 20px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
-        header h1 {
+        h1 {
+            color: #2c5282;
             font-size: 2.5em;
+            font-weight: 700;
             margin-bottom: 10px;
+        }
+        header p {
+            color: #5a67d8;
+            font-size: 1.2em;
+            font-weight: 300;
         }
         nav {
             background: white;
             padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            margin-bottom: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
         }
         nav ul {
             list-style: none;
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 20px;
+            gap: 15px;
         }
         nav a {
             text-decoration: none;
-            color: #667eea;
-            font-weight: bold;
-            padding: 10px 15px;
-            border-radius: 5px;
-            transition: background 0.3s;
+            color: #4a5568;
+            font-weight: 500;
+            padding: 10px 20px;
+            border-radius: 25px;
+            transition: background 0.3s, color 0.3s;
         }
         nav a:hover {
-            background: #667eea;
-            color: white;
+            background: #e2e8f0;
+            color: #2c5282;
         }
         main {
             display: grid;
-            gap: 40px;
+            gap: 30px;
         }
         section {
             background: white;
             padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.6s ease forwards;
+        }
+        section:nth-child(1) { animation-delay: 0.1s; }
+        section:nth-child(2) { animation-delay: 0.2s; }
+        section:nth-child(3) { animation-delay: 0.3s; }
+        section:nth-child(4) { animation-delay: 0.4s; }
+        section:nth-child(5) { animation-delay: 0.5s; }
+        section:nth-child(6) { animation-delay: 0.6s; }
+        section:nth-child(7) { animation-delay: 0.7s; }
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
         h2 {
-            color: #667eea;
+            color: #2c5282;
             font-size: 1.8em;
             margin-bottom: 20px;
-            border-bottom: 3px solid #e9ecef;
+            border-bottom: 3px solid #e2e8f0;
             padding-bottom: 10px;
         }
+        h3 {
+            color: #4a5568;
+            font-size: 1.4em;
+            margin: 25px 0 15px 0;
+        }
         ul {
-            list-style-type: disc;
-            padding-left: 30px;
+            margin-left: 20px;
             margin-bottom: 20px;
         }
         li {
             margin-bottom: 10px;
         }
-        p {
-            margin-bottom: 20px;
-            font-size: 1.1em;
-        }
-        .mitos {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-        }
-        .mito, .verdade {
+        .mito {
+            background: #fed7d7;
             padding: 15px;
             border-radius: 8px;
-        }
-        .mito {
-            background: #fff3cd;
-            border-left: 5px solid #ffc107;
+            margin: 15px 0;
+            border-left: 5px solid #e53e3e;
         }
         .verdade {
-            background: #d1ecf1;
-            border-left: 5px solid #17a2b8;
+            background: #c6f6d5;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+            border-left: 5px solid #38a169;
+        }
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            color: #718096;
         }
         @media (max-width: 768px) {
             body {
                 padding: 10px;
             }
-            header h1 {
+            h1 {
                 font-size: 2em;
             }
             nav ul {
                 flex-direction: column;
                 align-items: center;
             }
-            .mitos {
-                grid-template-columns: 1fr;
+            section {
+                padding: 20px;
+            }
+        }
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.6em;
+            }
+            h2 {
+                font-size: 1.5em;
             }
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Orientações para Pais de Crianças Autistas</h1>
-        <p>Informações claras e práticas para apoiar o desenvolvimento da sua criança</p>
-    </header>
-
-    <nav>
-        <ul>
-            <li><a href="#o-que-e">O que é autismo?</a></li>
-            <li><a href="#níveis">Níveis de suporte</a></li>
-            <li><a href="#comportamentos">Masking, Shutdown e Meltdown</a></li>
-            <li><a href="#dicas">Dicas para o dia a dia</a></li>
-            <li><a href="#mindfulness">Estratégias: mindfulness</a></li>
-            <li><a href="#recursos">Livros e aplicativos</a></li>
-            <li><a href="#mitos">Mitos e verdades</a></li>
-        </ul>
-    </nav>
-
-    <main>
-        <section id="o-que-e">
-            <h2>O que é autismo em crianças?</h2>
-            <p>O Transtorno do Espectro Autista (TEA) é uma condição neurodesenvolvimental que afeta a comunicação, o comportamento e a interação social. Em crianças, os sinais incluem:</p>
+    <div class="container">
+        <header>
+            <h1>Orientação para Pais de Crianças Autistas</h1>
+            <p>Informações baseadas em fontes confiáveis como DSM-5, CDC e APA</p>
+        </header>
+        
+        <nav>
             <ul>
-                <li>Dificuldades na comunicação verbal e não verbal;</li>
-                <li>Comportamentos repetitivos ou interesses intensos e restritos;</li>
-                <li>Sensibilidades sensoriais (sons, texturas, luzes);</li>
-                <li>Atrasos no desenvolvimento da linguagem ou habilidades sociais.</li>
+                <li><a href="#o-que-e">O que é autismo</a></li>
+                <li><a href="#niveis">Níveis de suporte</a></li>
+                <li><a href="#masking">Masking, Shutdown e Meltdown</a></li>
+                <li><a href="#dicas">Dicas para o dia a dia</a></li>
+                <li><a href="#estrategias">Estratégias alternativas</a></li>
+                <li><a href="#recursos">Para pais e responsáveis</a></li>
+                <li><a href="#mitos">Mitos e verdades</a></li>
             </ul>
-            <p>É um espectro, variando de leve a severo, e é diagnosticado por profissionais qualificados.</p>
-        </section>
-
-        <section id="níveis">
-            <h2>Como o neuropediatra diferencia níveis de suporte</h2>
-            <p>De acordo com o DSM-5, o TEA é classificado em três níveis com base no suporte necessário:</p>
-            <ul>
-                <li><strong>Nível 1:</strong> Requer suporte. Dificuldades sociais evidentes sem suporte, mas pode funcionar com ajuda mínima.</li>
-                <li><strong>Nível 2:</strong> Requer suporte substancial. Déficits marcados em comunicação e flexibilidade comportamental.</li>
-                <li><strong>Nível 3:</strong> Requer suporte muito substancial. Comunicação gravemente limitada e rigidez extrema.</li>
-            </ul>
-            <p>O neuropediatra avalia sintomas, histórico e observações para determinar o nível.</p>
-        </section>
-
-        <section id="comportamentos">
-            <h2>Masking, Shutdown e Meltdown</h2>
-            <ul>
-                <li><strong>Masking:</strong> Estratégia inconsciente de esconder traços autistas para se adequar socialmente, causando exaustão emocional.</li>
-                <li><strong>Shutdown:</strong> Colapso interno por sobrecarga sensorial ou emocional; a criança para de responder, como um 'desligamento'.</li>
-                <li><strong>Meltdown:</strong> Explosão externa de raiva ou choro intenso devido à sobrecarga, não controlável voluntariamente.</li>
-            </ul>
-            <p>Reconhecer esses sinais ajuda a prevenir e gerenciar crises.</p>
-        </section>
-
-        <section id="dicas">
-            <h2>Dicas para o dia a dia</h2>
-            <ul>
-                <li>Estabeleça rotinas previsíveis com horários visuais;</li>
-                <li>Crie um espaço calmo para regulação sensorial;</li>
-                <li>Use comunicação alternativa (figuras, apps);</li>
-                <li>Evite sobrecargas: limite estímulos e prepare transições;</li>
-                <li>Reforce comportamentos positivos com elogios específicos;</li>
-                <li>Cuide do seu bem-estar como cuidador.</li>
-            </ul>
-        </section>
-
-        <section id="mindfulness">
-            <h2>Estratégias alternativas: mindfulness</h2>
-            <p>Mindfulness adapta atenção plena para crianças autistas:</p>
-            <ul>
-                <li>Exercícios de respiração profunda (balão na barriga);</li>
-                <li>Atividades sensoriais guiadas (toque em objetos calmantes);</li>
-                <li>Meditations curtas com visualizações simples;</li>
-                <li>Yoga infantil adaptada com poses animais;</li>
-                <li>Prática diária de 5 minutos para reduzir ansiedade.</li>
-            </ul>
-            <p>Comece devagar e torne lúdico.</p>
-        </section>
-
-        <section id="recursos">
-            <h2>Para pais e responsáveis: Livros e aplicativos</h2>
-            <p><strong>Livros recomendados:</strong></p>
-            <ul>
-                <li>"O cérebro autista" - Temple Grandin;</li>
-                <li>"Guiando seu filho autista" - Editora Autismo;</li>
-                <li>"Não me abandone" - histórias reais de autistas.</li>
-            </ul>
-            <p><strong>Aplicativos úteis:</strong></p>
-            <ul>
-                <li>Proloquo2Go (comunicação alternativa);</li>
-                <li>Autism Tracker (registro de comportamentos);</li>
-                <li>Special Words (aprendizado de linguagem);</li>
-                <li>Breathing Exercises (mindfulness).</li>
-            </ul>
-        </section>
-
-        <section id="mitos">
-            <h2>Mitos e verdades</h2>
-            <div class="mitos">
+        </nav>
+        
+        <main>
+            <section id="o-que-e">
+                <h2>1. O que é autismo em crianças</h2>
+                <p>O Transtorno do Espectro Autista (TEA) é um transtorno do neurodesenvolvimento caracterizado por déficits persistentes na comunicação e interação social, além de padrões restritos e repetitivos de comportamento, interesses ou atividades, conforme definido no <strong>DSM-5</strong> (Manual Diagnóstico e Estatístico de Transtornos Mentais, 5ª edição, da APA - American Psychiatric Association).</p>
+                <p>Os sintomas geralmente aparecem nos primeiros anos de vida e podem variar amplamente em intensidade. De acordo com o <strong>CDC</strong> (Centers for Disease Control and Prevention), cerca de 1 em 36 crianças nos EUA apresenta TEA, com prevalência similar no Brasil segundo estudos da ABENEPI.</p>
+            </section>
+            
+            <section id="niveis">
+                <h2>2. Como o neuropediatra diferencia os níveis de suporte</h2>
+                <p>O DSM-5 classifica o TEA em três níveis com base na necessidade de suporte:</p>
+                <ul>
+                    <li><strong>Nível 1 (Requer suporte):</strong> Dificuldades sociais sem suporte, mas pode funcionar com algum apoio. Inflexibilidade causa prejuízos significativos.</li>
+                    <li><strong>Nível 2 (Requer suporte substancial):</strong> Déficits marcados em comunicação verbal e social, com comportamentos repetitivos evidentes mesmo com suporte.</li>
+                    <li><strong>Nível 3 (Requer suporte muito substancial):</strong> Déficits severos, comunicação mínima verbal, extrema dificuldade em lidar com mudanças.</li>
+                </ul>
+                <p>O neuropediatra avalia o histórico, observação comportamental e ferramentas como ADOS-2 para determinar o nível.</p>
+            </section>
+            
+            <section id="masking">
+                <h2>3. Masking, Shutdown e Meltdown</h2>
+                <h3>Masking</h3>
+                <p>O <em>masking</em> (camuflagem) ocorre quando a criança autista imita comportamentos neurotípicos para se adequar socialmente, o que pode levar a exaustão emocional e física. É mais comum em meninas e adultos diagnosticados tardiamente (APA).</p>
+                
+                <h3>Shutdown</h3>
+                <p>Um <em>shutdown</em> é uma resposta de 'desligamento' à sobrecarga sensorial ou emocional, resultando em retirada, silêncio ou imobilidade, como mecanismo de proteção cerebral.</p>
+                
+                <h3>Meltdown</h3>
+                <p>Um <em>meltdown</em> é uma reação intensa e involuntária à sobrecarga, manifestando-se como choro, gritos ou agressividade, diferentemente de birras intencionais.</p>
+            </section>
+            
+            <section id="dicas">
+                <h2>4. Dicas para o dia a dia</h2>
+                <ul>
+                    <li><strong>Rotina e previsibilidade:</strong> Use cronogramas visuais e timers para estruturar o dia, reduzindo ansiedade (CDC).</li>
+                    <li><strong>Lidar com imprevistos:</strong> Avise com antecedência sobre mudanças e ofereça escolhas limitadas.</li>
+                    <li><strong>Estratégias para minimizar sofrimento:</strong> Identifique gatilhos sensoriais (ruídos, texturas) e adapte o ambiente.</li>
+                    <li><strong>Pausas estratégicas:</strong> Crie 'cantinhos calmos' com itens sensoriais para recarga.</li>
+                </ul>
+            </section>
+            
+            <section id="estrategias">
+                <h2>5. Estratégias alternativas (Mindfulness)</h2>
+                <p>Técnicas de mindfulness adaptadas, como exercícios de respiração profunda (inspirar por 4s, segurar 4s, expirar 4s), visualizações guiadas ou foco em sensações táteis, ajudam a regular emoções. Estudos da APA mostram benefícios em reduzir ansiedade em autistas.</p>
+            </section>
+            
+            <section id="recursos">
+                <h2>6. Para pais e responsáveis (livros e aplicativos)</h2>
+                <h3>Livros recomendados:</h3>
+                <ul>
+                    <li>"Neurotribes" de Steve Silberman (edição em PT-BR).</li>
+                    <li>"O cérebro autista" de Temple Grandin.</li>
+                    <li>"Guia para Pais de Crianças com Autismo" da ABENEPI.</li>
+                </ul>
+                <h3>Aplicativos:</h3>
+                <ul>
+                    <li><strong>Pictosfera:</strong> Comunicação alternativa aumentativa (CAA).</li>
+                    <li><strong>Autism Tracker:</strong> Registro de comportamentos.</li>
+                    <li><strong>Proloquo2Go:</strong> Suporte à comunicação.</li>
+                </ul>
+            </section>
+            
+            <section id="mitos">
+                <h2>7. Mitos e verdades</h2>
                 <div class="mito">
-                    <h3>Mito</h3>
-                    <ul>
-                        <li>Autistas não sentem emoções.</li>
-                        <li>Vacinas causam autismo.</li>
-                        <li>Todas as crianças autistas são gênios.</li>
-                    </ul>
+                    <strong>Mito:</strong> Autismo é resultado de má criação.
                 </div>
                 <div class="verdade">
-                    <h3>Verdade</h3>
-                    <ul>
-                        <li>Autistas sentem emoções intensamente.</li>
-                        <li>É genético e neurodesenvolvimental.</li>
-                        <li>Habilidades variam no espectro.</li>
-                    </ul>
+                    <strong>Verdade:</strong> É um transtorno neurobiológico, com forte componente genético (DSM-5, CDC).
                 </div>
-            </div>
-        </section>
-    </main>
+                
+                <div class="mito">
+                    <strong>Mito:</strong> Crianças autistas não sentem emoções.
+                </div>
+                <div class="verdade">
+                    <strong>Verdade:</strong> Sentem emoções intensamente, mas podem expressá-las de forma diferente (APA).
+                </div>
+                
+                <div class="mito">
+                    <strong>Mito:</strong> Vacinas causam autismo.
+                </div>
+                <div class="verdade">
+                    <strong>Verdade:</strong> Múltiplos estudos (CDC, OMS) desmentem essa associação.
+                </div>
+                
+                <div class="mito">
+                    <strong>Mito:</strong> Diagnóstico depende só da falta de fala.
+                </div>
+                <div class="verdade">
+                    <strong>Verdade:</strong> TEA pode ocorrer em crianças verbais; diagnóstico considera múltiplos critérios (DSM-5).
+                </div>
+            </section>
+        </main>
+        
+        <footer>
+            <p>Fontes: DSM-5 (APA), CDC, ABENEPI. Consulte sempre um profissional de saúde. Última atualização: 2023.</p>
+        </footer>
+    </div>
 </body>
 </html>
