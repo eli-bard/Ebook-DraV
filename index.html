@@ -3,22 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guia Pós-Consulta: Entendendo o TEA</title>
+    <title>Guia Pós-Consulta: Entendendo o TEA | Dra. Vanessa Gewu</title>
     <style>
         :root {
-            --primary: #2c3e50;
-            --secondary: #3498db;
-            --accent: #eef7fd;
-            --text: #333;
-            --light-text: #666;
-            --border: #dcdde1;
+            --primary: #4A2B6B;      /* Roxo profundo da logomarca */
+            --secondary: #7C5D9E;    /* Roxo médio suave */
+            --accent: #F5F0FA;       /* Fundo lilás muito claro */
+            --gold: #D4AF37;         /* Dourado/âmbar para detalhes */
+            --text: #2D2A32;         /* Texto escuro com leve tom roxado */
+            --light-text: #6B5B7B;   /* Cinza com tom roxo */
+            --border: #E2D9F0;       /* Borda lilás clara */
+            --highlight-bg: #F9F6FE; /* Fundo para destaques */
         }
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: var(--text);
-            background-color: #f4f7f6;
+            background: linear-gradient(135deg, #F3EFF8 0%, #E8E1F2 100%);
             margin: 0;
             padding: 0;
         }
@@ -28,8 +30,9 @@
             margin: 40px auto;
             background: #fff;
             padding: 40px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            border-radius: 8px;
+            box-shadow: 0 8px 25px rgba(74, 43, 107, 0.15);
+            border-radius: 16px;
+            border-top: 5px solid var(--gold);
         }
 
         header {
@@ -39,16 +42,56 @@
             margin-bottom: 30px;
         }
 
-        h1 { color: var(--primary); margin-bottom: 5px; }
-        h2 { color: var(--secondary); border-left: 5px solid var(--secondary); padding-left: 15px; margin-top: 30px; }
-        h3 { color: var(--primary); margin-top: 20px; }
+        /* Logo visual inspirada na marca */
+        .logo-area {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .logo-name {
+            font-size: 1.8rem;
+            font-weight: 300;
+            letter-spacing: 2px;
+            color: var(--primary);
+        }
+        .logo-name strong {
+            font-weight: 700;
+            color: var(--gold);
+        }
+        .logo-specialty {
+            font-size: 0.9rem;
+            color: var(--light-text);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-top: -5px;
+        }
+
+        h1 { 
+            color: var(--primary); 
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+        
+        h2 { 
+            color: var(--primary); 
+            border-left: 5px solid var(--gold);
+            padding-left: 15px;
+            margin-top: 30px;
+            font-weight: 500;
+        }
+        
+        h3 { 
+            color: var(--secondary); 
+            margin-top: 20px;
+            font-weight: 600;
+        }
 
         .highlight-box {
             background-color: var(--accent);
-            border-radius: 6px;
+            border-radius: 12px;
             padding: 20px;
             margin: 20px 0;
-            border-left: 5px solid var(--secondary);
+            border-left: 5px solid var(--gold);
+            color: var(--text);
         }
 
         .grid {
@@ -61,11 +104,21 @@
         .card {
             border: 1px solid var(--border);
             padding: 15px;
-            border-radius: 6px;
+            border-radius: 12px;
+            background: white;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 14px rgba(74, 43, 107, 0.1);
+            border-color: var(--gold);
         }
 
         ul { padding-left: 20px; }
         li { margin-bottom: 10px; }
+        li::marker {
+            color: var(--gold);
+        }
 
         .footer {
             margin-top: 40px;
@@ -77,12 +130,24 @@
         }
 
         .important-note {
-            background: #fff3cd;
-            color: #856404;
+            background: #FEF7E0;  /* tom suave dourado */
+            color: #7A6300;
             padding: 15px;
-            border-radius: 6px;
+            border-radius: 12px;
             font-weight: bold;
             margin: 20px 0;
+            border-left: 5px solid var(--gold);
+        }
+
+        /* Botão/ links estilo */
+        a {
+            color: var(--secondary);
+            text-decoration: none;
+            border-bottom: 1px dashed var(--gold);
+        }
+        a:hover {
+            color: var(--primary);
+            border-bottom: 1px solid var(--gold);
         }
 
         @media (max-width: 600px) {
@@ -94,7 +159,16 @@
 <body>
 
 <div class="container">
-
+    <!-- Identidade visual inspirada na logomarca -->
+    <div class="logo-area">
+        <div class="logo-name">
+            <strong>Vanessa Gewu</strong>
+        </div>
+        <div class="logo-specialty">
+            Neurologia
+        </div>
+    </div>
+    
     <section>
         <h2>O que é o TEA?</h2>
         <p>O Transtorno do Espectro Autista é uma deficiência de desenvolvimento que afeta como uma pessoa interage com o mundo e se comunica com os outros. O termo "espectro" é fundamental: ele reflete a ampla gama de sintomas, comportamentos e níveis de suporte que cada indivíduo pode apresentar.</p>
@@ -103,7 +177,8 @@
             <strong>Neurodiversidade:</strong> Muitas vezes usamos este termo para descrever as diferentes formas como o cérebro humano pode funcionar, incluindo o autismo, TDAH e dificuldades de aprendizagem.
         </div>
     </section>
-<section>
+
+    <section>
         <h2>Níveis de Suporte no TEA</h2>
         <p>O autismo é classificado de acordo com o grau de apoio que a pessoa necessita em suas duas áreas principais: comunicação social e comportamentos repetitivos/restritos. É fundamental entender que esses níveis de gravidade não são fixos; eles podem variar ao longo do tempo e conforme o contexto ou a resposta da criança às terapias.</p>
         
@@ -120,9 +195,10 @@
 
         <div class="card" style="margin-top: 20px;">
             <h3>Nível 3: Requer Suporte Muito Substancial</h3>
-            <p>Neste nível, as dificuldades de comunicação social e os comportamentos restritos causam prejuízos graves ao funcionamento independente. A fala pode ser muito limitada ou inexistente, e a criança pode ter extrema dificuldade em mudar o foco ou a ação, apresentando grande sofrimento diante de alterações na rotina[cite: 1].</p>
+            <p>Neste nível, as dificuldades de comunicação social e os comportamentos restritos causam prejuízos graves ao funcionamento independente. A fala pode ser muito limitada ou inexistente, e a criança pode ter extrema dificuldade em mudar o foco ou a ação, apresentando grande sofrimento diante de alterações na rotina.</p>
         </div>
     </section>
+
     <section>
         <h2>Áreas Principais de Desafio</h2>
         <p>Embora cada criança seja única, os sintomas geralmente se agrupam em duas áreas principais:</p>
@@ -133,8 +209,8 @@
                 <ul>
                     <li>Dificuldade em manter contato visual.</li>
                     <li>Desafios em ler expressões faciais ou entender ironia e sarcasmo.</li>
-                    <li>Atraso ou ausência na fala</li>
-                    <li>Dificuldade em compartilhar interesses ("atenção compartilhada")</li>
+                    <li>Atraso ou ausência na fala.</li>
+                    <li>Dificuldade em compartilhar interesses ("atenção compartilhada").</li>
                 </ul>
             </div>
             <div class="card">
@@ -172,7 +248,7 @@
         </div>
     </section>
 
-<section>
+    <section>
         <h2>Estratégias de Apoio e Regulação</h2>
         
         <h3>Conforto Sensorial e Ambiente</h3>
@@ -206,8 +282,8 @@
         <h2>Recursos Úteis</h2>
         <p>Para informações adicionais e suporte, você pode consultar:</p>
         <ul>
-            <li><strong>Autism Speaks:</strong> www.autismspeaks.org </li>
-            <li><strong>CDC - "Learn the Signs. Act Early":</strong> www.cdc.gov/actearly </li>
+            <li><strong>Autism Speaks:</strong> <a href="#">www.autismspeaks.org</a></li>
+            <li><strong>CDC - "Learn the Signs. Act Early":</strong> <a href="#">www.cdc.gov/actearly</a></li>
             <li><strong>Autism Navigator:</strong> Recursos em vídeo sobre sinais precoces.</li>
         </ul>
     </section>
